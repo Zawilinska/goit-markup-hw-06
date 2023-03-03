@@ -287,7 +287,6 @@ body {
   font-size: 14px;
   letter-spacing: 0.03em;
   color: var(--color-white);
-
   margin-right: 70px;
 }
 
@@ -388,7 +387,7 @@ body {
 }
 
 .button-portfolio:hover {
-  background-color: var(--color-button);
+  background-color: var(--color-blue);
   color: var(--color-white);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -530,12 +529,9 @@ ul {
   padding-top: 10px;
 }
 
-.list-svg-icons:first-child {
-  padding-bottom: 9px;
-}
-
 .svg-footer {
   padding-top: 20px;
+
   align-items: center;
   justify-content: center;
   height: 44px;
@@ -684,7 +680,8 @@ ul {
 
 .sign-up {
   display: flex;
-  padding-left: 66px;
+  justify-content: flex-end;
+  list-style: none;
 }
 
 .button-send > button {
@@ -694,7 +691,7 @@ ul {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
-
+  cursor: pointer;
   letter-spacing: 0.06em;
 
   color: var(--color-white);
@@ -720,6 +717,12 @@ ul {
   border-radius: 4px;
   padding: 15px 290px 15px 16px;
   margin-right: 12px;
+  margin-left: 65px;
+}
+
+.input-send:focus {
+  outline: none;
+  border-color: var(--color-blue);
 }
 
 .button-send > button {
@@ -733,7 +736,7 @@ ul {
   transform: translatey(50%);
 }
 
-form {
+.form-modal {
   padding: 40px;
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -748,6 +751,7 @@ form {
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  padding-left: 42px;
 }
 
 textarea {
@@ -770,12 +774,17 @@ textarea {
   flex-direction: column;
 }
 
-.card-holder > label {
+.card-holder {
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
   color: var(--color-gray);
   padding-bottom: 4px;
+  position: relative;
+}
+
+.card-holder > span {
+  margin-bottom: 4px;
 }
 
 .card-holder-last {
@@ -784,7 +793,7 @@ textarea {
   flex-direction: column;
 }
 
-.card-holder-last > label {
+.card-holder-last > span {
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
@@ -810,17 +819,9 @@ textarea {
 
 .svg-input {
   position: absolute;
-  top: 11px;
+  top: 20px;
   left: 12px;
-}
-
-input {
-  width: 100%;
-  height: 100%;
-}
-
-.field > input {
-  padding-left: 42px;
+  transform: translatey(50%);
 }
 
 .checkbox {
@@ -833,12 +834,7 @@ input {
   border: 2px solid var(--color-black);
   border-radius: 2px;
   margin-right: 8px;
-}
-
-.icon-check:focus {
-  background-color: var(--color-blue);
-  border: 0;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  fill: var(--color-white);
 }
 
 .statement {
@@ -871,9 +867,31 @@ input {
   border-radius: 4px;
   justify-content: center;
   display: flex;
+  cursor: pointer;
 }
 
 .cta > button:hover {
   background: var(--color-button);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.field:focus {
+  outline: none;
+  border-color: var(--color-blue);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.field:focus + .svg-input {
+  fill: var(--color-blue);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.field-comment:focus {
+  outline: none;
+  border-color: var(--color-blue);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox:focus + svg {
+  fill: #2196f3;
 }
