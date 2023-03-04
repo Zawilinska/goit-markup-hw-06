@@ -954,5 +954,7 @@ input[type='checkbox']:checked + label span.statement::after {
 input[type='checkbox']:checked + label div.statement::after {
   background-image: url(./images/icon-check-blue.jpg);
   background-repeat: no-repeat;
+
+  
 }
 */
