@@ -693,7 +693,6 @@ ul {
   line-height: 1.87;
   cursor: pointer;
   letter-spacing: 0.06em;
-
   color: var(--color-white);
   padding: 10px 76px 10px 42px;
   justify-content: flex-end;
@@ -824,11 +823,63 @@ textarea {
   transform: translatey(50%);
 }
 
+.field:focus {
+  outline: none;
+  border-color: var(--color-blue);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.field:focus + .svg-input {
+  fill: var(--color-blue);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.field-comment:focus {
+  outline: none;
+  border-color: var(--color-blue);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .checkbox {
   align-items: center;
   display: flex;
   margin-bottom: 30px;
   padding-left: 15px;
+}
+
+.checkbox > input {
+  position: relative;
+  margin-right: 7px;
+}
+
+.checkbox > input::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.checkbox > input::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.checkbox > input::before {
+  content: '';
+  width: 16px;
+  height: 15px;
+  background-image: url(../images/icon-check.jpg);
+  background-repeat: no-repeat;
+}
+
+.checkbox > input:checked::after {
+  content: '';
+  width: 16px;
+  height: 15px;
+  background-image: url(../images/icon-check-blue.jpg);
+  background-repeat: no-repeat;
 }
 
 .statement {
@@ -868,56 +919,4 @@ textarea {
 .cta > button:hover {
   background: var(--color-button);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.field:focus {
-  outline: none;
-  border-color: var(--color-blue);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.field:focus + .svg-input {
-  fill: var(--color-blue);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.field-comment:focus {
-  outline: none;
-  border-color: var(--color-blue);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.checkbox > input {
-  position: relative;
-  margin-right: 7px;
-}
-
-.checkbox > input::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.checkbox > input::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.checkbox > input::before {
-  content: '';
-  width: 16px;
-  height: 15px;
-  background-image: url(../images/icon-check.jpg);
-  background-repeat: no-repeat;
-}
-
-.checkbox > input:checked::after {
-  content: '';
-  width: 16px;
-  height: 15px;
-  background-image: url(../images/icon-check-blue.jpg);
-  background-repeat: no-repeat;
 }
