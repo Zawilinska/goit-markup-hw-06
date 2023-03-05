@@ -68,7 +68,6 @@ body {
 
 .page-border {
   border-bottom: 1px solid var(--color-border);
-  max-width: 1600px;
 }
 
 .contact-tel {
@@ -300,7 +299,6 @@ body {
 
 .footer {
   background-color: var(--color-section);
-  max-width: 1600px;
 }
 
 .size-footer {
