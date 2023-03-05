@@ -838,11 +838,11 @@ textarea {
   color: var(--color-gray);
   align-items: center;
   display: flex;
-  padding-left: 19px;
 }
 
 .statement > a {
   color: var(--color-blue);
+  padding: 3px;
 }
 
 .cta {
@@ -890,71 +890,38 @@ textarea {
 .checkbox {
   margin-bottom: 10px;
 }
-.checkbox label {
+
+.checkbox > input {
   position: relative;
+  margin-right: 7px;
 }
 
-.checkbox span::before,
-.checkbox span::after {
+.checkbox > input::before {
   content: '';
   position: absolute;
   top: 0;
-  bottom: 0;
-  margin: auto;
+  left: 0;
 }
 
-.checkbox span.statement::before {
-  width: 25px;
-  height: 25px;
-  background-image: url(./images/icon-check.jpg);
-  left: -10px;
-  top: 0;
-  background-repeat: no-repeat;
-  box-sizing: border-box;
-}
-
-.checkbox span.statement::after {
-  content: '\f00c';
-  left: -10px;
-  top: 0;
-}
-input[type='checkbox']:checked + label span.statement::after {
-  background-image: url(./images/icon-check-blue.jpg);
-  background-repeat: no-repeat;
-}
-
-/*
-.checkbox input[type='checkbox'] {
-  display: none;
-}
-
-.checkbox .statement {
-  position: relative;
-}
-
-.checkbox span::before,
-.checkbox span::after {
+.checkbox > input::after {
   content: '';
   position: absolute;
   top: 0;
-  bottom: 0;
+  left: 0;
 }
 
-.checkbox span.statement::before {
-  width: 27px;
-  height: 27px;
-  background-image: url(./images/icon-check.jpg);
-
+.checkbox > input::before {
+  content: '';
+  width: 16px;
+  height: 15px;
+  background-image: url(../images/icon-check.jpg);
   background-repeat: no-repeat;
 }
 
-.checkbox span.statement::after {
-  content: '\f00c';
-}
-input[type='checkbox']:checked + label div.statement::after {
-  background-image: url(./images/icon-check-blue.jpg);
+.checkbox > input:checked::after {
+  content: '';
+  width: 16px;
+  height: 15px;
+  background-image: url(../images/icon-check-blue.jpg);
   background-repeat: no-repeat;
-
-  
 }
-*/
