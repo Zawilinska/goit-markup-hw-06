@@ -887,10 +887,6 @@ textarea {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.checkbox {
-  margin-bottom: 10px;
-}
-
 .checkbox > input {
   position: relative;
   margin-right: 7px;
